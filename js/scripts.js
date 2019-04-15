@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() { 
     var studentId = getStudentId();
-    var STUDENT_MOD_SCRIPT_URL = '//public.bc.fi/' + studentId + '/js-injection-lecture/mod.js';
-    var script = document.createElement('script');
     
-    script.src = STUDENT_MOD_SCRIPT_URL;
-    document.head.appendChild(script);
+    setTimeout(function(){
+        var script = document.createElement('script');
+        script.src = '//public.bc.fi/' + studentId + '/js-injection-lecture/mod.js';
+        document.head.appendChild(script);
+    }, 200);
+    
 
     var studentInfo = document.createElement('div');
     studentInfo.style = 'position: fixed; top: 0; text-align: center; width: 100%; height: 30px; background: white; color: black;';
