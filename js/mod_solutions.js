@@ -10,8 +10,11 @@ $(document).ready(function(){
     document.head.appendChild(slickStyle);
 
     $('body').append('<div class="your-class"><div>your content</div><div>your content</div><div>your content</div></div>');
-    $('.your-class').slick({
-        rtl: true
-    });
+    setTimeout(function(){
+        $('.your-class').slick({
+            rtl: true
+        });
+    }, 1000);
+    
           
 });
