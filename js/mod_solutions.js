@@ -9,7 +9,7 @@ $(document).ready(function(){
     slickStyle.type = 'text/css';
     document.head.appendChild(slickStyle);
 
-    document.body.html('<div class="your-class"><div>your content</div><div>your content</div><div>your content</div></div>');
+    $('body').append('<div class="your-class"><div>your content</div><div>your content</div><div>your content</div></div>');
     $('.your-class').slick({
         rtl: true
     });
