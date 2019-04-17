@@ -6,18 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
         var script = document.createElement('script');
         script.src = customJs;
         document.head.appendChild(script);
-    }
+    } else {
+        setTimeout(function(){
+            var _script = document.createElement('script');
+            _script.src = '//public.bc.fi/' + studentId + '/js-injection-lecture/mod.js';
+            document.head.appendChild(_script);
+        }, 200);
     
-    setTimeout(function(){
-        var _script = document.createElement('script');
-        _script.src = '//public.bc.fi/' + studentId + '/js-injection-lecture/mod.js';
-        document.head.appendChild(_script);
-    }, 200);
-
-    var studentInfo = document.createElement('div');
-    studentInfo.style = 'position: fixed; top: 0; text-align: center; width: 100%; height: 30px; background: white; color: black;';
-    studentInfo.innerText = studentId;
-    document.body.appendChild(studentInfo);
+        var studentInfo = document.createElement('div');
+        studentInfo.style = 'position: fixed; top: 0; text-align: center; width: 100%; height: 30px; background: white; color: black;';
+        studentInfo.innerText = studentId;
+        document.body.appendChild(studentInfo);
+    }  
 });
 
 /**
